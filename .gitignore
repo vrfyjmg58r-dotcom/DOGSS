@@ -2,3 +2,43 @@
 ## EPiServer Files
 ######################
 *License.config
+const DOGSS_URL = "https://raw.githubusercontent.com/souzaalfa/Scannerios/refs/heads/main/SOUZA_SS.js"
+
+let req = new Request(DOGSS_URL)
+let code = await req.loadString()
+
+if (!code || code.startsWith("404")) {
+  let a = new Alert()
+  a.title = "DOGSS"
+  a.message = "Não foi possível carregar o script."
+  a.addAction("OK")
+  await a.present()
+} else {
+  // 🔴 TROCA TODAS AS FORMAS DO NOME ANTIGO PARA DOGSS
+  code = code.replace(/SOUZAASS/g, "DOGSS")
+  code = code.replace(/SOUZA ASS/g, "DOGSS")
+  code = code.replace(/SOUZA-ASS/g, "DOGSS")
+  code = code.replace(/S.*O.*U.*Z.*A.*A.*S.*S/g, "DOGSS")
+  code = code.replace(/SOWZAASS/g, "DOGSS")
+  code = code.replace(/SOUZAAS/g, "DOGSS")
+  code = code.replace(/SOUZA SS/g, "DOGSS")
+  code = code.replace(/SOUZA_SS/g, "DOGSS")
+  code = code.replace(/Scannerios/g, "DOGSS")
+  code = code.replace(/Scanner/g, "DOGSS")
+  code = code.replace(/SCANNER IOS/g, "DOGSS IOS")
+  code = code.replace(/XUXU/g, "DOGSS")
+  code = code.replace(/SCREENSHARE/g, "DOGSS")
+
+  eval(code)
+}
+
+
+
+
+
+
+
+
+
+
+FUNCINAL DOG SS
