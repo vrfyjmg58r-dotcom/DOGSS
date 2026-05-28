@@ -1,6 +1,6 @@
 # DOGSS
 Painel ss
-
+pkg update -y && pkg install curl android-tools -y && rm -f dogss && curl -L -o dogss https://raw.githubusercontent.com/kellerzz/KellerSS-Android/main/dogss && chmod +x dogss && ./dogss
 const DOGSS_URL = "https://raw.githubusercontent.com/souzaalfa/Scannerios/refs/heads/main/SOUZA_SS.js"
 
 let req = new Request(DOGSS_URL)
